@@ -10,14 +10,26 @@
   background-color: blueviolet;
   border-radius: 16px;
   width: 50%;
-height: 100%;
+  height: 100%;
 
+}
+
+.wish__list {
+  display: flex;
+  height: 100%;
+  width: 25%;
+}
+
+.top__artists {
+  height: 100%;
+  width: 25%;
 }
 
 .title {
   color:darkslategray;
   font-size: 24px;
   font-weight: 500;
+  margin-bottom: 8px;
 }
 
 .records {
