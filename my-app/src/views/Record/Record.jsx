@@ -1,7 +1,11 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import { records as ownedRecords } from "../utilities/records";
-import Button from "./button";
+import "./Record.css"
+
+import BaseButton from "../../components/BaseButton/BaseButton";
+import Table from "../../components/BaseTable/BaseTable";
+
+import { records as ownedRecords } from "../../utilities/records";
 
 function Record() {
   function addRecord() {
@@ -11,12 +15,12 @@ function Record() {
     if (isRecordDuplicate(newRecord)) {
       return;
     }
-    // const newList = [...records, newRecord]
-    // setRecords(newList)
+    const newList = [...records, newRecord];
+    setRecords(newList);
   }
 
   function isRecordDuplicate(record) {
-    ownedRecords.filter((rec) => {
+    ownedRecords.some((rec) => {
       return (
         rec.artist === record.artist &&
         rec.title === record.title &&
@@ -27,8 +31,8 @@ function Record() {
 
   function setRecordDetails(value, type) {
     switch (type) {
-      case "name":
-        return setNewRecord({ ...newRecord, name: value });
+      case "title":
+        return setNewRecord({ ...newRecord, title: value });
       case "artist":
         return setNewRecord({ ...newRecord, artist: value });
       case "color":
@@ -40,50 +44,31 @@ function Record() {
 
   const [records, setRecords] = useState([]);
   const [newRecord, setNewRecord] = useState({
-    name: "",
+    title: "",
     artist: "",
     color: "",
   });
+  const headers = ["Title", "Artist", "Color"];
 
   useEffect(() => {
     setRecords(ownedRecords);
   }, []);
 
-  const recordsStyle = {
-    backgroundColor: "steelblue",
-  };
-
-  const recordContainer = {
-    display: "flex",
-    flexDirection: "column",
-    gap: "8px",
-    padding: "8px 0",
-    backgroundColor: "turquoise",
-    alignItems: "center",
-  };
-
-  const recordStyle = {
-    width: "200px",
-    borderRadius: "16px",
-    alignItems: "center",
-    color: "maroon",
-    backgroundColor: "wheat",
-  };
-
   return (
-    <div style={recordsStyle}>
-      <div style={recordContainer}>
+    <div className={'records'}>
+      <Table headers={headers} data={records} />
+      <div className={"record-container"}>
         {records.map((record, index) => (
-          <div style={recordStyle} key={index}>
+          <div className={"record"} key={index}>
             {record.artist} - {record.title}
           </div>
         ))}
-        <label htmlFor="recordName">Album Name</label>
+        <label htmlFor="recordTitle">Album Title</label>
         <input
-          id="recordName"
-          value={newRecord.name}
+          id="recordTitle"
+          value={newRecord.title}
           onChange={(event) => {
-            setRecordDetails(event.target.value, "name");
+            setRecordDetails(event.target.value, "title");
           }}
         />
         <label htmlFor="recordArtist">Artist</label>
@@ -102,7 +87,7 @@ function Record() {
             setRecordDetails(event.target.value, "color");
           }}
         />
-        <Button text="Add" color="green" handleClick={addRecord} />
+        <BaseButton text="Add" color="green" handleClick={addRecord} />
       </div>
     </div>
   );

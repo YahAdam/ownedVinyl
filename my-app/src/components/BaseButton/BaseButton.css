@@ -1,0 +1,18 @@
+.button {
+  border-radius: 16px;
+  padding: 8px;
+  border: 0;
+  cursor: pointer;
+}
+
+.button__white {
+  background-color: whitesmoke;
+}
+
+.button__blue {
+  background-color: blue;
+}
+
+.button__green {
+  background-color: green;
+}

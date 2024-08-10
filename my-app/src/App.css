@@ -1,20 +1,19 @@
 .App {
   text-align: center;
-  background-color: #4d8e3e;
+  background-color: #9E9DA0;
 }
 
 .App__container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: blueviolet;
   border-radius: 16px;
-  width: 50%;
+  width: 100%;
   height: 100%;
 
 }
 
-.wish__list {
+/* .wish__list {
   display: flex;
   height: 100%;
   width: 25%;
@@ -23,7 +22,7 @@
 .top__artists {
   height: 100%;
   width: 25%;
-}
+} */
 
 .title {
   color:darkslategray;
