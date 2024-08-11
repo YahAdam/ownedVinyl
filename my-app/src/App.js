@@ -1,6 +1,6 @@
+import { Component } from "react";
 import "./App.css";
 import Record from "./views/Record/Record";
-import { Component } from "react";
 
 class App extends Component {
   render() {

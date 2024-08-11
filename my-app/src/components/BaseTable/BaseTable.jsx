@@ -17,7 +17,7 @@ const Table = ({ headers, data }) => {
           data.map((row, rowIndex) => (
             <tr key={rowIndex}>
               {headers.map((header, hIndex) => (
-                <td key={hIndex}>{row[header]}</td>
+                <td key={hIndex}>{row[header.toLowerCase()]}</td>
               ))}
             </tr>
           ))
