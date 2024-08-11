@@ -1,0 +1,22 @@
+.title {
+    color:darkslategray;
+    font-weight: 500;
+    margin: 8px 0;
+    text-align: center;
+  }
+
+  .title--small {
+    font-size: 18px;
+  }
+
+  .title--medium {
+    font-size: 24px;
+  }
+
+  .title--large {
+    font-size: 32px;
+  }
+
+  .title--x-large {
+    font-size: 40px;
+  }

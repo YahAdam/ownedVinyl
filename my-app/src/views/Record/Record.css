@@ -1,12 +1,3 @@
 .records {
   width: 80%;
 }
-
-.record-container {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  padding: 8px 0;
-  background-color: turquoise;
-  align-items: center;
-}

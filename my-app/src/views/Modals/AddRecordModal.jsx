@@ -1,7 +1,9 @@
 import React from "react";
 import Modal from "react-modal";
+import "./AddRecordModal.css";
 
 import BaseButton from "../../components/BaseButton/BaseButton";
+import BaseTitle from "../../components/BaseTitle/BaseTitle";
 
 const customStyles = {
   content: {
@@ -11,6 +13,7 @@ const customStyles = {
     bottom: "auto",
     marginRight: "-50%",
     transform: "translate(-50%, -50%)",
+    width: "30%",
   },
 };
 
@@ -66,9 +69,9 @@ function AddRecordModal({ handleChange, defaultRecords }) {
         onAfterOpen={afterOpenModal}
         onRequestClose={closeModal}
         style={customStyles}
-        contentLabel="Example Modal"
       >
         <div className={"record-container"}>
+          <BaseTitle title="Add New Record" />
           <label htmlFor="recordTitle">Album Title</label>
           <input
             id="recordTitle"

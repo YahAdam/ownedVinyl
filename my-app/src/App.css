@@ -1,3 +1,7 @@
+/* This file is for styles for the `App.js` file and global styles
+Want to eventually find a way to create utility classes, for now
+those can go here.  */
+
 .App {
   text-align: center;
   background-color: #9E9DA0;
@@ -23,11 +27,3 @@
   height: 100%;
   width: 25%;
 } */
-
-.title {
-  color:darkslategray;
-  font-size: 24px;
-  font-weight: 500;
-  margin-bottom: 8px;
-}
-

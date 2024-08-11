@@ -1,13 +1,14 @@
 import { Component } from "react";
 import "./App.css";
 import Record from "./views/Record/Record";
+import BaseTitle from "./components/BaseTitle/BaseTitle";
 
 class App extends Component {
   render() {
     return (
       <div className="App">
         <div className="App__container">
-          <div className="title">Adam's vinyl list</div>
+          <BaseTitle title="Adam's Vinyl List" size="large"/>
           <Record />
         </div>
       </div>

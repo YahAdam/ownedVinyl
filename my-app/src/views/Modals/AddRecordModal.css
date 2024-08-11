@@ -1,0 +1,9 @@
+.record-container {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 8px 0;
+    background-color: #00fd72;
+    align-items: center;
+  }
+  
