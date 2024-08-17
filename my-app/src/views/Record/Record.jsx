@@ -13,7 +13,7 @@ function Record() {
   const [records, setRecords] = React.useState([]);
   const headers = ["Title", "Artist", "Color"];
   function setNewRecord(newRecordList) {
-    setRecords(newRecordList);
+    setRecords([...records, ...newRecordList]);
   }
   return (
     <div className={"records"}>

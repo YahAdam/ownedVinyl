@@ -4,6 +4,7 @@ import "./AddRecordModal.css";
 
 import BaseButton from "../../components/BaseButton/BaseButton";
 import BaseTitle from "../../components/BaseTitle/BaseTitle";
+import { XIcon } from "../../assets/XIcon";
 
 const customStyles = {
   content: {
@@ -11,9 +12,9 @@ const customStyles = {
     left: "50%",
     right: "auto",
     bottom: "auto",
-    marginRight: "-50%",
     transform: "translate(-50%, -50%)",
     width: "30%",
+    borderRadius: "16px"
   },
 };
 
@@ -60,6 +61,13 @@ function AddRecordModal({ handleChange, defaultRecords }) {
   function setRecordDetails(value, type) {
     return setNewRecord({ ...newRecord, [type]: value });
   }
+  function clearRecord(){
+    setNewRecord({
+      title: "",
+      artist: "",
+      color: "",
+    })
+  }
 
   return (
     <div>
@@ -70,6 +78,9 @@ function AddRecordModal({ handleChange, defaultRecords }) {
         onRequestClose={closeModal}
         style={customStyles}
       >
+        <div className={"flex justify-end"} onClick={closeModal}>
+          <XIcon width={"20px"} height={"20px"}/>
+        </div>
         <div className={"record-container"}>
           <BaseTitle title="Add New Record" />
           <label htmlFor="recordTitle">Album Title</label>
@@ -97,8 +108,8 @@ function AddRecordModal({ handleChange, defaultRecords }) {
             }}
           />
           <BaseButton text="Add" color="green" handleClick={addRecord} />
+          <BaseButton text="Clear" handleClick={clearRecord} />
         </div>
-        <button onClick={closeModal}>Close</button>
       </Modal>
     </div>
   );

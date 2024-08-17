@@ -1,10 +1,10 @@
-/* This file is for styles for the `App.js` file and global styles
-Want to eventually find a way to create utility classes, for now
-those can go here.  */
-
 .App {
   text-align: center;
   background-color: #9E9DA0;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
 }
 
 .App__container {
@@ -14,16 +14,4 @@ those can go here.  */
   border-radius: 16px;
   width: 100%;
   height: 100%;
-
 }
-
-/* .wish__list {
-  display: flex;
-  height: 100%;
-  width: 25%;
-}
-
-.top__artists {
-  height: 100%;
-  width: 25%;
-} */
