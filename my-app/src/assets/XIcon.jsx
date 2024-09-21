@@ -1,9 +1,13 @@
-export const XIcon = ({height = "30px", width = "30px"}) => {
+export default function XIcon({
+  height = "30",
+  width = "30",
+  color = "#000000",
+}) {
   return (
     <svg
-      fill="#000000"
-      height={height}
-      width={width}
+      fill={color}
+      height={`${height}px`}
+      width={`${width}px`}
       version="1.1"
       id="Capa_1"
       xmlns="http://www.w3.org/2000/svg"
@@ -19,4 +23,4 @@ export const XIcon = ({height = "30px", width = "30px"}) => {
       />
     </svg>
   );
-};
+}

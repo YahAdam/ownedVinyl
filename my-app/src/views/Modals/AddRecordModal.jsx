@@ -4,7 +4,7 @@ import "./AddRecordModal.css";
 
 import BaseButton from "../../components/BaseButton/BaseButton";
 import BaseTitle from "../../components/BaseTitle/BaseTitle";
-import { XIcon } from "../../assets/XIcon";
+import BaseIcon from "../../components/BaseIcon/BaseIcon";
 
 const customStyles = {
   content: {
@@ -61,17 +61,22 @@ function AddRecordModal({ handleChange, defaultRecords }) {
   function setRecordDetails(value, type) {
     return setNewRecord({ ...newRecord, [type]: value });
   }
-  function clearRecord(){
+  function clearRecord() {
     setNewRecord({
       title: "",
       artist: "",
       color: "",
-    })
+    });
   }
 
   return (
-    <div>
-      <button onClick={openModal}>Add Record</button>
+    <div className="flex justify-center">
+      <BaseButton
+        text="Add Record"
+        size="small"
+        icon={{ name: "Plus", props: { width: "24", height: "24" } }}
+        handleClick={openModal}
+      />
       <Modal
         isOpen={modalIsOpen}
         onAfterOpen={afterOpenModal}
@@ -79,7 +84,7 @@ function AddRecordModal({ handleChange, defaultRecords }) {
         style={customStyles}
       >
         <div className={"flex justify-end"} onClick={closeModal}>
-          <XIcon width={"20px"} height={"20px"}/>
+          <BaseIcon iconName={"XIcon"} props={{ width: "20", height: "20" }} />
         </div>
         <div className={"record-container"}>
           <BaseTitle title="Add New Record" />

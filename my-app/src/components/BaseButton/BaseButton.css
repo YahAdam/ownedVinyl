@@ -1,10 +1,27 @@
 .button {
-  border-radius: 16px;
-  padding: 8px;
-  border: 0;
+  display: flex;
+  align-items: center;
+  border: none;
+  border-radius: 6px;
   cursor: pointer;
+  font-size: 16px;
+  margin: 16px;
+  gap: 4px;
 }
 
+.button__small {
+  padding: 8px;
+}
+
+.button__medium {
+  padding: 16px;
+}
+
+.button__large {
+  padding: 24px;
+}
+
+/* use SCSS variables for these eventually */
 .button__white {
   background-color: whitesmoke;
 }
@@ -15,4 +32,8 @@
 
 .button__green {
   background-color: green;
+}
+
+.button__transparent {
+  background-color: inherit;
 }
