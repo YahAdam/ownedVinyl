@@ -1,0 +1,11 @@
+@import "../../styles/index";
+
+.record-container {
+    display: flex;
+    flex-direction: column;
+    gap: unit(2);
+    padding: unit(2) 0;
+    background-color: #00fd72; //change this eventually
+    align-items: center;
+  }
+  

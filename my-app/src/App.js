@@ -1,5 +1,5 @@
 import { Component } from "react";
-import "./App.css";
+import "./App.scss";
 import Record from "./views/Record/Record";
 import BaseTitle from "./components/BaseTitle/BaseTitle";
 

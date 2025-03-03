@@ -1,5 +1,5 @@
 import React from "react";
-import "./Record.css";
+import "./Record.scss";
 
 import Table from "../../components/BaseTable/BaseTable";
 import AddRecordModal from "../Modals/AddRecordModal";

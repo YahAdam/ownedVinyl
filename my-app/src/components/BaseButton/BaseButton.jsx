@@ -1,5 +1,5 @@
 import React from "react";
-import "./BaseButton.css";
+import "./BaseButton.scss";
 import BaseIcon from "../BaseIcon/BaseIcon";
 
 const BaseButton = ({

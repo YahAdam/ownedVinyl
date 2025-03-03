@@ -1,7 +1,9 @@
+@import "../../styles/index";
+
 .title {
     color:darkslategray;
     font-weight: 500;
-    margin: 8px 0;
+    margin: unit(2) 0;
     text-align: center;
   }
 
@@ -10,13 +12,13 @@
   }
 
   .title--medium {
-    font-size: 24px;
+    font-size: unit(6);
   }
 
   .title--large {
-    font-size: 32px;
+    font-size: unit(8);
   }
 
   .title--x-large {
-    font-size: 40px;
+    font-size: unit(10);
   }

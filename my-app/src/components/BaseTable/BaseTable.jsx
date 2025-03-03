@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import "./BaseTable.css";
+import "./BaseTable.scss";
 
 const Table = ({ headers, data }) => {
   return (

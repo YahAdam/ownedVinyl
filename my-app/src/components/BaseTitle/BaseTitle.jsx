@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import "./BaseTitle.css";
+import "./BaseTitle.scss";
 
 const BaseTitle = ({ title, size = "medium" }) => {
   const sizeValues = ["small", "medium", "large", "x-large"];
