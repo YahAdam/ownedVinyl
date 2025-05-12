@@ -1,6 +1,10 @@
+// I don't want to have to import each time I want to use my SCSS variables. 
+// Find a way to make these variables global
+@import "styles/index";
+
 .App {
   text-align: center;
-  background-color: #9E9DA0;
+  background-color: $light-grey;
   height: 100vh;
   width: 100vw;
   display: flex;
@@ -11,7 +15,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  border-radius: 16px;
+  border-radius: unit(4);
   width: 100%;
   height: 100%;
 }

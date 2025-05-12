@@ -1,0 +1,5 @@
+ $base: 0.25rem; 
+
+ @function unit($modifier: 1) {
+    @return $base * $modifier;
+  }

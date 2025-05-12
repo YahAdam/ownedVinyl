@@ -1,6 +1,6 @@
 import React from "react";
 import Modal from "react-modal";
-import "./AddRecordModal.css";
+import "./AddRecordModal.scss";
 
 import BaseButton from "../../components/BaseButton/BaseButton";
 import BaseTitle from "../../components/BaseTitle/BaseTitle";
@@ -14,7 +14,7 @@ const customStyles = {
     bottom: "auto",
     transform: "translate(-50%, -50%)",
     width: "30%",
-    borderRadius: "16px"
+    borderRadius: "1rem"
   },
 };
 

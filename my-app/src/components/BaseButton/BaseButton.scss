@@ -1,0 +1,40 @@
+@import "../../styles/index";
+
+.button {
+  display: flex;
+  align-items: center;
+  border: none;
+  border-radius: unit(2);
+  cursor: pointer;
+  font-size: unit(4);
+  margin: unit(4);
+  gap: unit(1);
+
+  &__small {
+    padding: unit(2);
+  }
+
+  &__medium {
+    padding: unit(4);
+  }
+
+  &__large {
+    padding: unit(6);
+  }
+
+  &__white {
+    background-color: $white;
+  }
+
+  &__blue {
+    background-color: $blue;
+  }
+
+  &__green {
+    background-color: $green;
+  }
+
+  &__transparent {
+    background-color: transparent;
+  }
+}
